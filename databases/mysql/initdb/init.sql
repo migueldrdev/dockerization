@@ -1,3 +1,7 @@
+-- Dar todos los privilegios al usuario migueldrdev
+GRANT ALL PRIVILEGES ON *.* TO 'migueldrdev'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 -- Script de ejemplo, se ejecuta al iniciar por primera vez
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,

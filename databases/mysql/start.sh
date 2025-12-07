@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bashx
 # MySQL - Script de inicio con verificaciones
 cd "$(dirname "$0")"
 SERVICE_NAME="MySQL"
@@ -43,11 +43,11 @@ if [ "$(docker ps -aq -f name=$MYSQL_CONTAINER)" ]; then
         exit 0
     else
         echo -e "${YELLOW}🔄 Iniciando contenedores existentes...${NC}"
-        docker-compose -f $COMPOSE_FILE up -d
+        docker compose -f $COMPOSE_FILE up -d
     fi
 else
     echo -e "${GREEN}🐳 Creando e iniciando contenedores...${NC}"
-    docker-compose -f $COMPOSE_FILE up -d
+    docker compose -f $COMPOSE_FILE up -d
 fi
 
 # Esperar a que MySQL esté listo
